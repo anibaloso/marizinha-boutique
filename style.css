@@ -1,3 +1,41 @@
-#productos{
-    margin-top: 2rem;
+body {
+  padding-top: 60px;
+}
+.product-card {
+  margin-bottom: 20px;
+}
+.filter-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#productos {
+  margin-top: 2rem;
+}
+
+#container-carga{
+    border: 2px solid red;
+    /* align-content: center; */
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#title{
+    margin: 0 auto;
+}
+
+#container-carga-box{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid rgb(0, 255, 98); */
+    padding: 2rem;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+input{
+    width: 30rem;
 }
