@@ -1,5 +1,5 @@
 // Lista de productos con tipo, nombre, imagen y precio
-const product = [
+const products = [
     {
         id: 1,
         name: "Camiseta básica blanca",
@@ -58,10 +58,41 @@ const product = [
     }
 ];
 
-let products = new product();
-console.log("🚀 ~ products:", products)
+
+// Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+    const nombreProduct = document.getElementById('product-name');
+    const typeProduct = document.getElementById('product-type');
+    const priceProduct = document.getElementById('product-price');
+    // const imageProduct = document.getElementById('product-image');
+    const addButton = document.getElementById('add-product-button');
 
 
 
+    addButton.addEventListener('click', () => {
+        const name = nombreProduct.value.trim();
+        const type = typeProduct.value;
+        const price = parseFloat(priceProduct.value);
+        // const image = imageProduct.value.trim();
+        const image = "un producto cualquiera";
+        if (!name || !price) {
+            alert("Por favor, complete todos los campos.");
+            return;
+        }
+        const newProduct = {
+            id: products.length + 1,
+            name,
+            type,
+            price,
+            image
+        }
 
-export { products };
+        products.push(newProduct);
+        console.log("🚀 ~ products:", products)
+        window.products = products;
+    })
+
+
+});
+
+export {products} ;

@@ -36,6 +36,11 @@ body {
     justify-content: space-between;
 }
 
+#add-product-button{
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
 input{
-    width: 30rem;
+    width: 20rem;
 }
